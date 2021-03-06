@@ -19,11 +19,20 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         body: Center(
-          child: Container(
-            width: 150,
-            height: 150,
-            color: Colors.red,
-            child: Image.asset('assets/images/cat.jpeg'),
+          child: Column(
+            children: [
+              Container(
+                color: Colors.red,
+                child: Text("asdf;laksdfj;laskdfj")),
+              Text("asdf;laksdfj;laskdfj"),
+              Container(
+                width: 150,
+                height: 150,
+                color: Colors.red,
+                child: Image.network(
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg'),
+              ),
+            ],
           ),
         ),
       ),
