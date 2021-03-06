@@ -23,9 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
             width: 150,
             height: 150,
             color: Colors.red,
-            child: Text(
-              "Hiso Koh kay",
-            ),
+            child: Image.asset('assets/images/cat.jpeg'),
           ),
         ),
       ),
