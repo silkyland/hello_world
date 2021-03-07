@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/screen/list_view_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -21,9 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Center(
           child: Column(
             children: [
-              Container(
-                color: Colors.red,
-                child: Text("asdf;laksdfj;laskdfj")),
+              Container(color: Colors.red, child: Text("asdf;laksdfj;laskdfj")),
               Text("asdf;laksdfj;laskdfj"),
               Container(
                 width: 150,
@@ -31,6 +30,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.red,
                 child: Image.network(
                     'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ListViewScreen(),
+                    ),
+                  );
+                },
+                child: Text("กดปุ่มนี้ดู"),
               ),
             ],
           ),
