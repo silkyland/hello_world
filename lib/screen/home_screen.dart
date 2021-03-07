@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/screen/example_screen.dart';
+import 'package:hello_world/screen/form_screen.dart';
 import 'package:hello_world/screen/list_view_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -41,6 +43,32 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 },
                 child: Text("กดปุ่มนี้ดู"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FormScreen(),
+                    ),
+                  );
+                },
+                child: Text(
+                  "form screen",
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ExampleScreen(),
+                    ),
+                  );
+                },
+                child: Text(
+                  "example screen",
+                ),
               ),
             ],
           ),
